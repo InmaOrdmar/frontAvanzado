@@ -1,5 +1,5 @@
 import './header-component.scss';
-import { makeNav } from '../nav/nav-component';
+import { makeNav } from 'components/nav/nav-component';
 
 export const makeHeader = ({ title }) => {
     const header = document.createElement('header');
