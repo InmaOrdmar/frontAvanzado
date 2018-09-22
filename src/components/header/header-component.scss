@@ -1,3 +1,7 @@
-h1 {
-    color: teal;
+header {
+    background-color: aliceblue;
+    .title {
+        color: teal;
+        text-align: center;
+    }
 }
