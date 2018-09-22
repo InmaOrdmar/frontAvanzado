@@ -32,10 +32,15 @@ var commonConfig = {
           {
             test: /\.(gif|png|jpe?g|svg)$/i,
             use: [
-              'file-loader',
+              {
+                loader: 'file-loader',
+                options: {
+                  name: 'assets/[path][name].[hash].[ext]'
+                }    
+              },
               {
                 loader: 'image-webpack-loader'
-              },
+              }
             ],
           }
         ]
