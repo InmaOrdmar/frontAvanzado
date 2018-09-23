@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const commonConfig = {
   entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index')],
@@ -17,11 +17,7 @@ const commonConfig = {
       minify: {
         collapseWhitespace: true
       }
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
     })
-
   ],
   module: {
     rules: [
@@ -71,6 +67,13 @@ const devConfig = {
   }
 };
 
-const prodConfig = {};
+const prodConfig = {
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
+    })
+  ]
+};
 
 module.exports = (env, argv) => (argv.mode === 'development' ? merge(commonConfig, devConfig) : merge(commonConfig, prodConfig));
