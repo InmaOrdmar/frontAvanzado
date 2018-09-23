@@ -1,1 +1,23 @@
 @import '~styles/normalize';
+
+body {
+   display: grid;
+   grid-template-rows: auto 1fr 100px;
+   grid-gap: 0;
+   grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+}

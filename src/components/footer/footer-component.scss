@@ -1,0 +1,19 @@
+@import '../header/header-component.scss';
+
+footer {
+    @extend header;
+    text-align: center;
+    padding-bottom: 0;
+    .title {
+        display: inline-block;
+    }
+    .link-to-top {
+        padding: 2px 5px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: teal;
+        &:hover {
+            color: lighten(teal, 20%);
+        }
+    }
+}
