@@ -1,0 +1,26 @@
+.account-actions {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4px 0;
+    .login-button, .register-button {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        width: 100px;
+        border-radius: 2px;
+        text-transform: uppercase;
+        padding: 6px 4px;
+        margin: 1px 2px;
+        font-size: .8rem;
+    }
+    .login-button {
+        background-color: rgb(174, 240, 75);
+    }
+    .register-button {
+        background-color: rgb(226, 171, 68);
+    }
+}

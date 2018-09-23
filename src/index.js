@@ -2,6 +2,5 @@ import './index.scss';
 import { makeHeader } from 'components/header/header-component';
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.appendChild(makeHeader({ title: 'Large' }));
+  document.body.appendChild(makeHeader({ title: 'Large' }));
 });
-  
