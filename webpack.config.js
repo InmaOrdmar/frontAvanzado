@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin; // eslint-disable-line
+const Dotenv = require('dotenv-webpack');
 
 const commonConfig = {
   entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index')],
@@ -17,7 +19,8 @@ const commonConfig = {
       minify: {
         collapseWhitespace: true
       }
-    })
+    }),
+    new Dotenv()
   ],
   module: {
     rules: [
@@ -72,7 +75,14 @@ const prodConfig = {
     new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css'
+    }),
+    new CriticalPlugin({
+      src: path.join(__dirname, 'src', 'index.html'),
+      inline: true,
+      minify: true,
+      dest: path.join(__dirname, 'dist', 'index.html')
     })
+
   ]
 };
 

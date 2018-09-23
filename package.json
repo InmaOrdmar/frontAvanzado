@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
-    "start": "webpack-dev-server --mode=development --hot --inline"
+    "start": "webpack-dev-server --mode=development --hot --inline",
+    "server": "json-server --watch ./src/data/db.json --port=8000"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,9 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "dotenv-webpack": "^1.5.7",
+    "eslint-config-airbnb-base": "^13.1.0",
     "webpack-merge": "^4.1.4",
-    "eslint-config-airbnb-base": "^13.1.0"
+    "webpack-plugin-critical": "^1.0.0"
   }
 }
