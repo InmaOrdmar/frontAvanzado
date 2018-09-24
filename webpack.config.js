@@ -20,7 +20,10 @@ const commonConfig = {
         collapseWhitespace: true
       }
     }),
-    new Dotenv()
+    new Dotenv(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
+    })
   ],
   module: {
     rules: [
@@ -73,9 +76,6 @@ const devConfig = {
 const prodConfig = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
-    }),
     new CriticalPlugin({
       src: path.join(__dirname, 'src', 'index.html'),
       inline: true,
