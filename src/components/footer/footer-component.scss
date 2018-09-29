@@ -11,9 +11,9 @@ footer {
         padding: 2px 5px;
         text-decoration: none;
         font-size: 1.2rem;
-        color: teal;
+        color: $orange;
         &:hover {
-            color: lighten(teal, 20%);
+            color: $yellow;
         }
     }
 }

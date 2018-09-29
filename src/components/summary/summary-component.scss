@@ -1,0 +1,16 @@
+@import '~styles/settings.scss';
+@import '~styles/utils.scss';
+
+img {
+    max-width: 100%;
+}
+
+.summary-title {
+    font-family: $title-font;
+    @include fontSize($font-size-xxl);
+    color: $grey-text;
+}
+
+.fa-comments {
+    color: $grey-text;
+}

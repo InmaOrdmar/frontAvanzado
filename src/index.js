@@ -1,4 +1,4 @@
-import './index.scss';
+import 'styles/main.scss';
 import { makeHeader } from 'components/header/header-component';
 import { makeContent } from 'components/content/content-component';
 import { makeFooter } from 'components/footer/footer-component';

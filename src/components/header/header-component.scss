@@ -1,9 +1,13 @@
+@import '~styles/settings.scss';
+@import '~styles/utils.scss';
+
 header {
-    background-color: aliceblue;
+    background-color: $grey;
     padding-bottom: 10px;
     .title {
-        color: teal;
+        color: $orange;
         text-align: center;
-        padding: 15px 0 10px 0;
+        @include fontSize($font-size-xxxl);
+        font-family: $title-font;
     }
 }

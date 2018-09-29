@@ -1,6 +1,10 @@
-@import '~styles/normalize';
+@import 'normalize';
+@import 'settings';
+
 
 body {
+   background-color: $white;
+   font-family: $base-font;
    display: grid;
    grid-template-rows: auto 1fr 100px;
    grid-gap: 0;
@@ -20,4 +24,12 @@ header {
 
 footer {
     grid-area: footer;
+}
+
+h1 {
+    margin: .7rem;
+}
+
+h2 {
+    margin: .5rem;
 }
