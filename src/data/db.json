@@ -13,7 +13,7 @@
             "author": "Margarita",
             "tags": ["science", "tech"],
             "brief": "No estamos solos en el universo.",
-            "picUrl": "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OS83NTgvb3JpZ2luYWwvc3RhcnMtdW5pdmVyc2UuanBn",
+            "picUrl": "assets/article01.jpg",
             "article-content": "",
             "comments": [
                 {
@@ -29,7 +29,7 @@
             "author": "Rosa",
             "tags": ["lifestyle"],
             "brief": "Escúchalo y te dirá lo que de verdad necesitas.",
-            "picUrl": "http://www.carebags4kids.org/wp-content/uploads/2018/06/girl-playing.jpg",
+            "picUrl": "assets/article02.jpg",
             "article-content": "",
             "comments": [
                 {
@@ -50,7 +50,7 @@
             "author": "Jacinto",
             "tags": ["art", "design", "lifestyle"],
             "brief": "¿Te la perdiste? No te preocupes: te lo contamos todo.",
-            "picUrl": "http://directory.studioabroad.com/_customtags/ct_Image.cfm?Image_ID=9545",
+            "picUrl": "assets/article03.jpg",
             "article-content": "",
             "comments": []
         }
