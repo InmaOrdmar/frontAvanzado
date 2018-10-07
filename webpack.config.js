@@ -60,8 +60,8 @@ const commonConfig = {
       utils: path.resolve(__dirname, 'src', 'utils'),
       data: path.resolve(__dirname, 'src', 'data')
     }
-  }
-
+  },
+  devtool: 'source-map'
 };
 
 const devConfig = {
@@ -75,13 +75,13 @@ const devConfig = {
 
 const prodConfig = {
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new CriticalPlugin({
+    new CleanWebpackPlugin(['dist'])
+    /* new CriticalPlugin({
       src: path.join(__dirname, 'src', 'index.html'),
       inline: true,
       minify: true,
       dest: path.join(__dirname, 'dist', 'index.html')
-    })
+    }) */
 
   ]
 };

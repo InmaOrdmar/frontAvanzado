@@ -2,6 +2,9 @@
 @import 'settings';
 @import 'utils';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
    background-color: $white;

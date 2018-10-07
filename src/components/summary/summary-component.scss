@@ -3,10 +3,12 @@
 
 .summary {
     margin: .5rem;
-    width: 500px;
-    border-bottom: 1px $grey solid;
-    border-right: 1px $grey solid;
+    max-width: 500px;
+    flex: 1 1 100%;
     border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 3px 3px 10px $shadow;
+    background-color: $white;
 }
 
 img {
@@ -17,7 +19,7 @@ img {
 }
 
 .details {
-    padding: 0 0 .3rem .3rem;
+    padding: 0 .5rem .2rem .5rem;
 
     .summary-title {
         font-family: $title-font;
