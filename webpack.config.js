@@ -6,6 +6,18 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin; // eslint-disable-line
 const Dotenv = require('dotenv-webpack');
 
+const page = ({ title, template, chunks, filename }) => { // eslint-disable-line
+  return new HtmlWebpackPlugin({ // eslint-disable-line
+    title,
+    template,
+    chunks,
+    filename,
+    minify: {
+      collapseWhitespace: true
+    }
+  });
+};
+
 const commonConfig = {
   entry: {
     home: ['@babel/polyfill', path.join(__dirname, 'src', 'pages', 'home', 'index')],
@@ -16,22 +28,16 @@ const commonConfig = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    page({
       title: 'Large',
       template: path.join(__dirname, 'src', 'pages', 'home', 'index.html'),
       chunks: ['home'],
-      minify: {
-        collapseWhitespace: true
-      },
       filename: path.resolve(__dirname, 'dist', 'index.html')
     }),
-    new HtmlWebpackPlugin({
+    page({
       title: 'Large - Article',
       template: path.join(__dirname, 'src', 'pages', 'article', 'index.html'),
       chunks: ['article'],
-      minify: {
-        collapseWhitespace: true
-      },
       filename: path.resolve(__dirname, 'dist', 'article', 'index.html')
     }),
     new Dotenv(),
@@ -63,7 +69,11 @@ const commonConfig = {
             loader: 'image-webpack-loader'
           }
         ]
-      }
+      } /* ,
+      {
+        test: /\.(html|ejs)$/,
+        use: ['html-loader', 'ejs-html-loader']
+      } */
     ]
   },
   resolve: {
