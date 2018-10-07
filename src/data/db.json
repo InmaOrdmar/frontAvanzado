@@ -14,7 +14,7 @@
             "tags": ["science", "tech"],
             "brief": "No estamos solos en el universo.",
             "picUrl": "assets/article01.jpg",
-            "article-content": "",
+            "content": "",
             "comments": [
                 {
                     "author": "Juan",
@@ -30,7 +30,7 @@
             "tags": ["lifestyle"],
             "brief": "Escúchalo y te dirá lo que de verdad necesitas.",
             "picUrl": "assets/article02.jpg",
-            "article-content": "",
+            "content": "",
             "comments": [
                 {
                     "author": "Juan",
@@ -51,7 +51,7 @@
             "tags": ["art", "design", "lifestyle"],
             "brief": "¿Te la perdiste? No te preocupes: te lo contamos todo.",
             "picUrl": "assets/article03.jpg",
-            "article-content": "",
+            "content": "",
             "comments": []
         }
 

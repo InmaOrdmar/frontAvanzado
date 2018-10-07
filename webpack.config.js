@@ -7,18 +7,32 @@ const CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin; // esl
 const Dotenv = require('dotenv-webpack');
 
 const commonConfig = {
-  entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index')],
+  entry: {
+    home: ['@babel/polyfill', path.join(__dirname, 'src', 'pages', 'home', 'index')],
+    article: ['@babel/polyfill', path.join(__dirname, 'src', 'pages', 'article', 'index')]
+  },
   output: {
-    filename: 'main[hash].js',
+    filename: '[name][hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Large',
-      template: path.join(__dirname, 'src', 'index.html'),
+      template: path.join(__dirname, 'src', 'pages', 'home', 'index.html'),
+      chunks: ['home'],
       minify: {
         collapseWhitespace: true
-      }
+      },
+      filename: path.resolve(__dirname, 'dist', 'index.html')
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Large - Article',
+      template: path.join(__dirname, 'src', 'pages', 'article', 'index.html'),
+      chunks: ['article'],
+      minify: {
+        collapseWhitespace: true
+      },
+      filename: path.resolve(__dirname, 'dist', 'article', 'index.html')
     }),
     new Dotenv(),
     new MiniCssExtractPlugin({
